@@ -1,8 +1,7 @@
 const ustpen = document.querySelector("#ustpen");
 let altpen = document.querySelector("#altpen");
 const button = document.querySelectorAll(".button");
-ustpen.value = "";
-altpen.value = 0;
+
 
 button[0].addEventListener("click", () => {
   ustpen.value = "";
@@ -14,9 +13,14 @@ button[1].addEventListener("click", () => {
 });
 
 button[2].addEventListener("click", () => {
-  ustpen.value =  "√ " + altpen.value + " =";
-    altpen.value = ustpen.value.split(" ")[1] ** (0.5);
+  altpen.value = altpen.value.substring(0, altpen.value.length - 1);
 });
+
+
+// button[2].addEventListener("click", () => {
+//   ustpen.value =  "√ " + altpen.value + " =";
+//     altpen.value = ustpen.value.split(" ")[1] ** (0.5);
+// });
 
 button[3].addEventListener("click", () => {
     if (ustpen.value == "" ) {
